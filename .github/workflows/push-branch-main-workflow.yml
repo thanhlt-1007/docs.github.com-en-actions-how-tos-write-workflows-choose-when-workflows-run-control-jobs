@@ -1,0 +1,13 @@
+name: push-branch-main-workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-branch-main-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        run: echo "Run on ref name ${{ github.ref_name }}"
